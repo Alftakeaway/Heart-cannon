@@ -1,3 +1,49 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+<style>body {
+  background: #000;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -113px;
+  margin-top: -48px;
+  width: 226px;
+  height: 96px;
+  pointer-events: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+marquee {
+  color: #fff !important;
+  text-align: center;
+  opacity: 0.5;
+  loop : 1;
+  pointer-events: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+ </style>
 <div id="tsparticles"></div>
 <div id="title">
   
@@ -5,5 +51,74 @@
     Click to send a heart hold click to spread love
   </marquee>
 </marquee>
+<script> tsParticles.load("tsparticles", {
+  fullScreen: {
+    enable: true,
+    zIndex: 100
+  },
+  fpsLimit: 60,
+  particles: {
+    number: {
+      value: 0
+    },
+    color: {
+      value: "#ff0000",
+      animation: {
+        enable: true,
+        speed: 180,
+        sync: true
+      }
+    },
+    shape: {
+      type: "heart"
+    },
+    opacity: {
+      value: 1
+    },
+    size: {
+      value: { min: 38, max: 88 },
+      animation: {
+        enable: true,
+        speed: 5,
+        minimumValue: 17,
+        sync: true,
+        startValue: "min",
+        count: 1
+      }
+    },
+    move: {
+      enable: true,
+      speed: { min: 10, max: 20 },
+      direction: "top",
+      random: false,
+      straight: false,
+      outMode: "destroy",
+      gravity: {
+        enable: true
+      }
+    }
+  },
+  interactivity: {
+    detectsOn: "window",
+    events: {
+      onclick: {
+        enable: true,
+        mode: "trail"
+      },
+      resize: true
+    },
+    modes: {
+      trail: {
+        delay: 0.1,
+        quantity: 1
+      }
+    }
+  },
+  retina_detect: true
+});
+ </script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.33.3/tsparticles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-heart@1.41.3/tsparticles.shape.heart.min.js"></script>
 
 <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
